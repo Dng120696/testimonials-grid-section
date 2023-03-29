@@ -36,12 +36,25 @@ body{
 }
 .container-grid{
   width: clamp(30rem, 90%,130rem);
- 
   margin: 5rem auto;
   overflow: hidden;
   display: grid;
-
+  animation:opacity 2s ease-in-out;
   gap: 2rem;
+}
+@keyframes opacity {
+  0%{
+    opacity:0;
+    transform: translateX(-5rem);
+  }
+  80%{
+    opacity:0.8;
+
+  }
+  100%{
+    opacity:1;
+    transform: translate(0);
+  }
 }
 img{
   width:clamp(3.5rem,5vw,4rem);
